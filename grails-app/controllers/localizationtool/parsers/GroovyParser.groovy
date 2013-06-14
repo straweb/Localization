@@ -28,10 +28,11 @@ class GroovyParser implements FileParser {
 
 
     def getReportEntries(String fileText, type = 'positive') {
-
-//        fileText = fileText.replaceAll("(/\\*\\*)(\\s*(.*?)\\s*)*(\\*/)"," ")             //remove comment lines
-        fileText = fileText.replaceAll("(/\\*)(.*?)(\\s*(.*?)){0,99}(\\*/)"," ")             //remove comment lines
-        fileText = fileText.replaceAll("//(.*)"," ")                //TO DO  Need to fix inside "" and '' removed comment lines
+        /**
+         * TODO: need to avoid inside"" or '' for removing commented lines
+        * */
+//        fileText = fileText.replaceAll("/\\*.*?(\\s.*?)*\\*/"," ")             //remove commented lines
+        fileText = fileText.replaceAll("//(.*)"," ")             //removes commented line
         def RegExCase1 ="(?i)(errorMessage|render|subject|message|msg|emailSubject)\\s*[:|=|(]\\s*[\"|\"\"\"](?!\\\$\\{message\\(code:)(?!\\w*\\.\\w*)([^\"|'])(.*?)[\"|\"\"\"]"
         def resultantList = fileText.findAll(RegExCase1)
 
@@ -48,7 +49,7 @@ class GroovyParser implements FileParser {
             return resultantList
         }
                               /**/
-        /**
+        /** **
          *  Negative test case which is not competed for this project.
          */
           /**

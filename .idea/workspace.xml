@@ -80,7 +80,7 @@
       <file leaf-file-name="GroovyParser.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/localizationtool/parsers/GroovyParser.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="1958" selection-end="1958" vertical-scroll-proportion="0.33096084">
+            <state line="28" column="104" selection-start="692" selection-end="692" vertical-scroll-proportion="0.08896797">
               <folding />
             </state>
           </provider>
@@ -98,7 +98,7 @@
       <file leaf-file-name="RawTextFinderController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/localizationtool/RawTextFinderController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="29" selection-start="722" selection-end="722" vertical-scroll-proportion="-11.478261">
+            <state line="12" column="115" selection-start="465" selection-end="465" vertical-scroll-proportion="-6.304348">
               <folding />
             </state>
           </provider>
@@ -116,7 +116,7 @@
       <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="49" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.0">
+            <state line="109" column="113" selection-start="2930" selection-end="2930" vertical-scroll-proportion="-1.5098039">
               <folding />
             </state>
           </provider>
@@ -125,7 +125,7 @@
       <file leaf-file-name="GSPFileParser.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/localizationtool/parsers/GSPFileParser.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="72" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.0">
+            <state line="13" column="128" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -168,9 +168,9 @@
         <option value="$PROJECT_DIR$/grails-app/controllers/localizationtool/DuplicateKeysController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/localizationtool/MissingTextController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/localizationtool/InvalidKeysController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/localizationtool/parsers/HTMLParser.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/localizationtool/parsers/JScriptParser.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/localizationtool/parsers/GSPFileParser.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/localizationtool/parsers/GroovyParser.groovy" />
       </list>
@@ -637,7 +637,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -751,13 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="49" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/localizationtool/parsers/HTMLParser.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="112" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
@@ -775,13 +768,6 @@
     <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="38" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/localizationtool/FileParser.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="58" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -814,23 +800,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/localizationtool/FileParser.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="58" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/localizationtool/RawTextFinderController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="29" selection-start="722" selection-end="722" vertical-scroll-proportion="-11.478261">
+        <state line="12" column="115" selection-start="465" selection-end="465" vertical-scroll-proportion="-6.304348">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="113" selection-start="2930" selection-end="2930" vertical-scroll-proportion="-1.5098039">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/localizationtool/parsers/GSPFileParser.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="72" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.0">
+        <state line="13" column="128" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/localizationtool/parsers/GroovyParser.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1958" selection-end="1958" vertical-scroll-proportion="0.33096084">
+        <state line="28" column="104" selection-start="692" selection-end="692" vertical-scroll-proportion="0.08896797">
           <folding />
         </state>
       </provider>

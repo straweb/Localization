@@ -13,7 +13,7 @@ import org.apache.commons.lang.StringEscapeUtils
 class GSPFileParser implements FileParser{
     def getReportEntries(String fileText, type = 'positive'){
         def outputStr
-        fileText = fileText.replaceAll("(%\\{--)(.*?)(\\s*(.*?)){0,99}(--\\}%)"," ") // remove commented lines
+        fileText = fileText.replaceAll("%\\{--.*?(\\s.*?)*--\\}%"," ") // remove commented lines
 //        fileText = fileText.replaceAll("(<!--)(.*?)(\\s*(.*?)){0,99}(-->)"," ") // remove commented lines
         def listOccurred = fileText.findAll("(?i)<* (value|alt|title)\\s*=\\s*\"\\s*(?![\"|'])(?!\\\$\\{(.*?)\\})(.*?)\"")
         // def listOccurred2 = fileText.findAll(gspRegExp2)
