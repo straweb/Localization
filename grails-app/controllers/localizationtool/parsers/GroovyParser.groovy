@@ -33,10 +33,10 @@ class GroovyParser implements FileParser {
         * */
 //        fileText = fileText.replaceAll("/\\*.*?(\\s.*?)*\\*/"," ")             //remove commented lines
         fileText = fileText.replaceAll("//(.*)"," ")             //removes commented line
-        def RegExCase1 ="(?i)(errorMessage|render|subject|message|msg|emailSubject)\\s*[:|=|(]\\s*[\"|\"\"\"](?!\\\$\\{message\\(code:)(?!\\w*\\.\\w*)([^\"|'])(.*?)[\"|\"\"\"]"
+        def RegExCase1 ="(?i)(errorMessage|render|subject|message|msg|emailSubject)[\\s*|:|=|(]\\s*[\"|\"\"\"](?!\\\$\\{message\\(code:)(?!\\w*\\.\\w*)([^\"|'])(.*?)[\"|\"\"\"]"
         def resultantList = fileText.findAll(RegExCase1)
 
-        def RegExCase2 ="(?i)(errorMessage|render|subject|message|msg|emailSubject)\\s*[:|=|(]\\s*['|\"\"\"](?!\\\$\\{message\\(code:)(?!\\w*\\.\\w*)([^\"|'])(.*?)['|\"\"\"]"
+        def RegExCase2 ="(?i)(errorMessage|render|subject|message|msg|emailSubject)[\\s*|:|=|(]\\s*['|\"\"\"](?!\\\$\\{message\\(code:)(?!\\w*\\.\\w*)([^\"|'])(.*?)['|\"\"\"]"
         resultantList += fileText.findAll(RegExCase2)
 
         def RegExCase3 = "(?i)(rejectValue\\((['].*['],)|rejectValue\\(([\"].*[\"],))\\s*['|\"](?!\\\$\\{message\\(code:)(?!\\w*\\.\\w*)([^\"|'])(.*?)['|\"]"

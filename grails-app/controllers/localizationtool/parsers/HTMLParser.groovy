@@ -15,16 +15,15 @@ class HTMLParser implements FileParser{
 
         fileText = fileText.replaceAll("(<!--)(.*?)(-->)"," ") // remove commented lines
 
-        def listOccurred = fileText.findAll("(?i)<* (value|alt|title)\\s*=\\s*(\"|')[\"|']\\s*(?!\\\$\\{(.*?)\\})(.*?)(\"|')")
-        // def listOccurred2 = fileText.findAll(gspRegExp2)
-        //if(listOccurred2)
-        //   render("<br/>  <u>Occurred2:</u> "+StringEscapeUtils.escapeHtml(listOccurred2.toListString()))
-        def listOccurred3 = fileText.findAll("(?i)<*>(?!--}%)(?!\\s*<)(?!<g:)(?!:<)(?!&nbsp;<)(?!\\s*\\*\\s*<)(?!\\\$\\{(.*?)\\})(.*?)<")
-//        if(listOccurred)
-//            println("<br/> <u>Occurred1:</u> "+StringEscapeUtils.escapeHtml(listOccurred.toListString())+"<br/>")
-//        if(listOccurred3)
-//            return listOccurred3
-        return listOccurred+listOccurred3
+        def htmlRegExpCase1 = "(?i)<* (value|alt|title)\\s*=\\s*\"(?!\")\\s*(?!\\\$\\{(.*?)\\})(.*?)\""
+        def resultantList = fileText.findAll(htmlRegExpCase1)
+
+        def htmlRegExpCase2 = "(?i)<* (value|alt|title)\\s*=\\s*'(?!')\\s*(?!\\\$\\{(.*?)\\})(.*?)'"
+        resultantList += fileText.findAll(htmlRegExpCase2)
+
+        def htmlREgExpCase3 = "(?i)<*>(?!--}%)(?![^a-z|A-Z])(?!\\s*<)(?!<g:)(?!:<)(?!&nbsp;<)(?!\\s*\\*\\s*<)(?!\\\$\\{(.*?)\\})(.*?)<"
+        resultantList += fileText.findAll(htmlREgExpCase3)
+        return resultantList
 
     }
 
