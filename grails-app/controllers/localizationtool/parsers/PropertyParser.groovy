@@ -78,4 +78,17 @@ class PropertyParser implements FileParser {
         return dupli
     }
 
+    static def uniqueList(List arr) {
+        Set set = new HashSet()
+        def dupli = []
+        for (int i = 0; i < arr.size(); i++) {
+            if (set.contains(arr[i])) {
+                dupli.add(arr[i])
+            } else {
+                set.add(arr[i])
+            }
+        }
+        return set
+    }
+
 }

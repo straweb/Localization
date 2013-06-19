@@ -14,6 +14,10 @@ class UrlMappings {
             action = [GET: "generateReport"]
         }
 
+        "/uniqueKeys/"(controller: "duplicateKeys", parseRequest: false) {
+            action = [GET: "uniqueKeys"]
+        }
+
         "/missingText/"(controller: "missingText", parseRequest: false) {
             action = [GET: "generateReport"]
         }

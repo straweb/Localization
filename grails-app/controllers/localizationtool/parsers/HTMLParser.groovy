@@ -15,10 +15,10 @@ class HTMLParser implements FileParser{
 
         fileText = fileText.replaceAll("(<!--)(.*?)(-->)"," ") // remove commented lines
 
-        def htmlRegExpCase1 = "(?i)<* (value|alt|title)\\s*=\\s*\"(?!\")\\s*(?!\\\$\\{(.*?)\\})(.*?)\""
+        def htmlRegExpCase1 = "(?i)<* (value|alt|title)\\s*=\\s*\"(?!\")\\s*(?![^a-z|A-Z])(?!\\\$\\{(.*?)\\})(.*?)\""
         def resultantList = fileText.findAll(htmlRegExpCase1)
 
-        def htmlRegExpCase2 = "(?i)<* (value|alt|title)\\s*=\\s*'(?!')\\s*(?!\\\$\\{(.*?)\\})(.*?)'"
+        def htmlRegExpCase2 = "(?i)<* (value|alt|title)\\s*=\\s*'(?!')\\s*(?![^a-z|A-Z])(?!\\\$\\{(.*?)\\})(.*?)'"
         resultantList += fileText.findAll(htmlRegExpCase2)
 
         def htmlREgExpCase3 = "(?i)<*>(?!--}%)(?![^a-z|A-Z])(?!\\s*<)(?!<g:)(?!:<)(?!&nbsp;<)(?!\\s*\\*\\s*<)(?!\\\$\\{(.*?)\\})(.*?)<"

@@ -16,7 +16,7 @@ class Utility {
     }
 
     static def isValidFile(File file, String fileTypes) {
-        if (!file.name.equalsIgnoreCase("_eula.gsp") && file.path.indexOf("\\affiserv\\plugins\\") == -1 && file.path.indexOf("\\tests\\") == -1 && file.path.indexOf("\\dojox\\") == -1 && file.path.indexOf("\\dojo\\") == -1) {
+        if (!file.name.equalsIgnoreCase("_eula.gsp") && !file.name.equalsIgnoreCase("readme.html") && !file.name.equalsIgnoreCase("Example.html") && file.path.indexOf("\\affiserv\\plugins\\") == -1 && file.path.indexOf("\\tests\\") == -1 && file.path.indexOf("\\dojox\\") == -1 && file.path.indexOf("\\dojo\\") == -1) {
             def extension = getExtensionFromFilename(file.name)
             if (extension != null && !extension.isEmpty() && fileTypes.indexOf(extension.toLowerCase()) > -1) {
                 if(!extension.equalsIgnoreCase("properties"))

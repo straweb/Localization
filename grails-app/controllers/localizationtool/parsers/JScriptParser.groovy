@@ -20,11 +20,17 @@ class JScriptParser implements FileParser{
         def jScriptRegExCase2 = "(?i)(_okDialog|showMsg)\\s*\\(\\s*('|\")(?!keys\\[(.*?)\\])(.*?)(\"|')\\s*,\\s*('|\")(?!keys\\[(.*?)\\])(.*?)(\"|')"
         resultantList += fileText.findAll(jScriptRegExCase2)
 
-        def jScriptRegExCase3 = "(?i)(label|title)\\s*:\\s*('|\")(?!keys\\[(.*?)\\])(.*?)(\"|')"
-        resultantList += fileText.findAll(jScriptRegExCase3)
+        def jScriptRegExCase31 = "(?i)(label|title)\\s*:\\s*(')(?!keys\\[(.*?)\\])(.*?)(')"
+        resultantList += fileText.findAll(jScriptRegExCase31)
 
-        def jScriptRegExCase4 = "(?i)(return\\s*)('|\")(?!keys\\[(.*?)\\])(.*?)(\"|')"
+        def jScriptRegExCase32 = "(?i)(label|title)\\s*:\\s*(\")(?!keys\\[(.*?)\\])(.*?)(\")"
+        resultantList += fileText.findAll(jScriptRegExCase32)
+
+        def jScriptRegExCase4 = "(?i)(return\\s*)(\")(?!keys\\[(.*?)\\])(.*?)(\")"
         resultantList += fileText.findAll(jScriptRegExCase4)
+
+        def jScriptRegExCase41 = "(?i)(return\\s*)(')(?!keys\\[(.*?)\\])(.*?)(')"
+        resultantList += fileText.findAll(jScriptRegExCase41)
 
         def jScriptRegExCase5 = "(?i)(innerHTML|value|msg|errMsg|message)\\s*=\\s*(')[^'](?!keys\\[(.*?)\\])(.*?)(')"
         resultantList += fileText.findAll(jScriptRegExCase5)

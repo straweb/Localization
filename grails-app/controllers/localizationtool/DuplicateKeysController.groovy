@@ -7,6 +7,55 @@ class DuplicateKeysController {
 
     def index() { }
 
+    def uniqueKeys(){
+        render("Welcome Here the report for duplicate keys def in properites file")
+        def dirPath = params.get('dirPath', System.properties["projectDirPath"])
+        dirPath += "\\grails-app\\i18n"
+        def currentDir = new File(dirPath);
+        def fileTypes = params.get('fileTypes', '.properties')
+
+        def enTextFile
+        def deTextFile
+        //list all files recursively and pass each file to file parsers
+        currentDir.eachFileRecurse(
+                {file ->
+                        if (file.name.equalsIgnoreCase("en.properties")) {
+                            enTextFile = file.text
+                        } else if (file.name.equalsIgnoreCase("de.properties")) {
+                            deTextFile = file.text
+                        }
+                }
+        )
+        Set set = new HashSet()
+
+        def enLocaleKey //= enTextFile.findAll("(\\b([a-z|A-Z|0-9|(\\.)])[a-z]*\\b)+=(.*)")
+        enTextFile.eachLine(
+                {  lineText, lineNo ->
+                    set.add(lineText)
+                }
+        )
+//        set.addAll(enLocaleKey)
+        def missingText = []
+        deTextFile.eachLine(
+                {  lineText, lineNo ->
+                    if (set.contains(lineText)) {
+                        println(lineText)
+                    } else {
+                        missingText.add(lineText)
+                    }
+                }
+        )
+
+        if (missingText) {
+            render("<br/><br/><b>Missing Text for the following english text </b>"+missingText.size()+"<br />");
+            missingText.each { listValue ->
+                render("<br/>" + StringEscapeUtils.escapeHtml(listValue.toString()))
+            }
+        }
+
+
+    }
+
     def generateReport(String path) {
         render("Welcome Here the report for duplicate keys def in properites file")
         def dirPath = params.get('dirPath', System.properties["projectDirPath"])
